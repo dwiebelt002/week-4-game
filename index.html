@@ -20,11 +20,7 @@
 			<h4 class="text-center">The RPG</h4>
 			<h4>When you play the Game of Thrones, you win or you die...</h4>
 			<hr>
-		<div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Attack</button>
-  <button type="button" class="btn btn-default">Defend</button>
-  <button type="button" class="btn btn-default">Retreat</button>
-</div>
+		
 
 <!-- Set buttons to play the Game of Thrones theme -->
 			<div class="text-center">
@@ -38,6 +34,8 @@
     <h3 class="panel-title">Select the Royal Family You Wish to Help Claim the Iron Throne of Westeros</h3>
   </div>
  
+ <div id = "playerSelect">
+
 <div class="row">
   <div class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
@@ -82,8 +80,14 @@
 
 </div>
 </div>
+</div>
 
-
+<!--These are the action buttons for the user to play the game -->
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default">Attack</button>
+  <button type="button" class="btn btn-default">Defend</button>
+  <button type="button" class="btn btn-default">Retreat</button>
+</div>
 
 <!-- This position will hold your character that you are playing as -->
 	<div class="panel panel-default">
@@ -91,19 +95,117 @@
     <h3 class="panel-title">Your Character</h3>
   </div>
   <div class="panel-body">
-    Panel content
+
+<!--This span is where the user's health marker will be. -->
+  <strong>Your Health</strong> <span id= "userHealth">0</span>
   </div>
+
+  <div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/nedstark.jpg" alt="Eddard">Ned Stark
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/dany.png" alt="Khaleesi">Daenerys Targaryen
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/joffery.jpg" alt="Joffery">Joffery Baratheon
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/tywin.jpg" alt="Tywin">Tywin Lannister
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/balon.jpg" alt="Balon">Balon Greyjoy
+    </a>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/stannis.png" alt="Stannis">Stannis Baratheon
+    </a>
+  </div>
+</div>
 
 </div>
 
 <!-- This position will display the remaining Contenders for the Iron Throne that you still have to battle in order to win the game -->
+
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Contenders for the Iron Throne</h3>
   </div>
   <div class="panel-body">
-    Panel content
+    Choose Who To Challenge in Battle
   </div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/nedstark.jpg" alt="Eddard">Ned Stark
+    </a>
+  </div>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/dany.png" alt="Khaleesi">Daenerys Targaryen
+    </a>
+  </div>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/joffery.jpg" alt="Joffery">Joffery Baratheon
+    </a>
+  </div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/tywin.jpg" alt="Tywin">Tywin Lannister
+    </a>
+  </div>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/stannis.png" alt="Stannis">Stannis Baratheon
+    </a>
+  </div>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/balon.jpg" alt="Balon">Balon Greyjoy
+    </a>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
 </div>
 
 <!-- This position displays the enemy that the user has selected to go into battle with. Enemy will remain in this position until defeated. -->
@@ -112,8 +214,63 @@
     <h3 class="panel-title">Enemy in Battle</h3>
   </div>
   <div class="panel-body">
-    Panel content
+
+<strong>Ememy Health</strong> <span id= "enemyCounter">0</span>
+
   </div>
+
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/nedstark.jpg" alt="Eddard">Ned Stark
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/dany.png" alt="Khaleesi">Daenerys Targaryen
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/joffery.jpg" alt="Joffery">Joffery Baratheon
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/tywin.jpg" alt="Tywin">Tywin Lannister
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/balon.jpg" alt="Balon">Balon Greyjoy
+    </a>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="images/stannis.png" alt="Stannis">Stannis Baratheon
+    </a>
+  </div>
+</div>
+
+</div>
+
 </div>
 <script>
 		// Javascript function that wraps everything
@@ -133,5 +290,9 @@
 			});
 	});
 </script>
+
+<!--Adds Link to Javascript File -->
+<script src= 'logic.js'</script>
+
 </body>
 </html>
