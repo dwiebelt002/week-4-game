@@ -31,26 +31,27 @@
 <!-- This section is where the user will select which House they want to play as, this will in turn slect thier character (the head of that particular royal family)-->
 			<div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Select the Royal Family You Wish to Help Claim the Iron Throne of Westeros</h3>
+    <h3 class="panel-title">Click to learn about the Royal Famalies of Westeros to aid in your decision on who to help seize the Iron Throne.</h3>
   </div>
  
  <div id = "playerSelect">
+ </div>
 
 <div class="row">
   <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/stark.png" alt="House Stark">House Stark
+    <a href="http://gameofthrones.wikia.com/wiki/House_Stark" class="thumbnail">
+      <img src="images/stark.png" onclick="DoSomething();" alt="House Stark">House Stark
     </a>
   </div>
   <div class="row">
   <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="http://gameofthrones.wikia.com/wiki/House_Targaryen" class="thumbnail">
       <img src="images/targaryen.jpg" alt="House Targaryen">House Targaryen
     </a>
   </div>
   <div class="row">
   <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="http://gameofthrones.wikia.com/wiki/House_Baratheon" class="thumbnail">
       <img src="images/baratheon.jpg" alt="House Baratheon">House Baratheon of King's Landing
     </a>
   </div>
@@ -60,19 +61,19 @@
 
 <div class="row">
   <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="http://gameofthrones.wikia.com/wiki/House_Lannister" class="thumbnail">
       <img src="images/lannister.jpg" alt="House Lannister">House Lannister
     </a>
   </div>
   <div class="row">
   <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="http://gameofthrones.wikia.com/wiki/House_Baratheon_of_Dragonstone" class="thumbnail">
       <img src="images/heartflame.jpg" alt="House Baratheon">House Baratheon of Dragonstone
     </a>
   </div>
    <div class="row">
   <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="http://gameofthrones.wikia.com/wiki/House_Greyjoy" class="thumbnail">
       <img src="images/greyjoy.jpg" alt="House Greyjoy">House Greyjoy
     </a>
   </div>
@@ -85,11 +86,13 @@
 <!--These are the action buttons for the user to play the game -->
 <div class="btn-group" role="group" aria-label="...">
   <button type="button" class="btn btn-default">Attack</button>
-  <button type="button" class="btn btn-default">Defend</button>
-  <button type="button" class="btn btn-default">Retreat</button>
+  <button type="button" class="btn btn-default">Select Character</button>
+  <button type="button" class="btn btn-default">Select Opponent</button>
 </div>
 
 <!-- This position will hold your character that you are playing as -->
+
+<div id = "yourCharacter"
 	<div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Your Character</h3>
@@ -99,58 +102,25 @@
 <!--This span is where the user's health marker will be. -->
   <strong>Your Health</strong> <span id= "userHealth">0</span>
   </div>
+</div>
 
-  <div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/nedstark.jpg" alt="Eddard">Ned Stark
-    </a>
+
+
+<!-- This position displays the enemy that the user has selected to go into battle with. Enemy will remain in this position until defeated. -->
+
+<div id = "enemyCharacter"
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Enemy in Battle</h3>
+  </div>
+  <div class="panel-body">
+
+<strong>Ememy Health</strong> <span id= "enemyCounter">0</span>
+
   </div>
 </div>
 
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/dany.png" alt="Khaleesi">Daenerys Targaryen
-    </a>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/joffery.jpg" alt="Joffery">Joffery Baratheon
-    </a>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/tywin.jpg" alt="Tywin">Tywin Lannister
-    </a>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/balon.jpg" alt="Balon">Balon Greyjoy
-    </a>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/stannis.png" alt="Stannis">Stannis Baratheon
-    </a>
-  </div>
-</div>
-
-</div>
-
+  
 <!-- This position will display the remaining Contenders for the Iron Throne that you still have to battle in order to win the game -->
 
 <div class="panel panel-default">
@@ -208,70 +178,29 @@
 </div>
 </div>
 
-<!-- This position displays the enemy that the user has selected to go into battle with. Enemy will remain in this position until defeated. -->
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Enemy in Battle</h3>
+
+
+
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Left</button>
   </div>
-  <div class="panel-body">
-
-<strong>Ememy Health</strong> <span id= "enemyCounter">0</span>
-
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Middle</button>
   </div>
-
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/nedstark.jpg" alt="Eddard">Ned Stark
-    </a>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/dany.png" alt="Khaleesi">Daenerys Targaryen
-    </a>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/joffery.jpg" alt="Joffery">Joffery Baratheon
-    </a>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/tywin.jpg" alt="Tywin">Tywin Lannister
-    </a>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/balon.jpg" alt="Balon">Balon Greyjoy
-    </a>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default"><img src="images/nedstark.jpg" height="300px" width="180px" "><h4>Ned Stark</h4></button>
   </div>
 </div>
 
 
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/stannis.png" alt="Stannis">Stannis Baratheon
-    </a>
-  </div>
-</div>
 
-</div>
 
-</div>
+
+
+
+
+
 <script>
 		// Javascript function that wraps everything
 		$(document).ready(function(){

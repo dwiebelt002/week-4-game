@@ -10,13 +10,13 @@ var userHealth = 0
 var enemyHealth = 0
 
 //pre-set character attributes
-var player = function (health, strength, defense){
+var player = function (health, strength, counter){
 this.health = health;
 this.strength = strength;
-this.defense = defense;
+this.counter = counter;
 };
 
-var opponent = function (health, strength, defense){
+var opponent = function (health, strength){
 this.health = health;
 this.strength = strength;
 this.defense = defense;
@@ -32,6 +32,4 @@ var balGrey = new opponent(300, 10, 25)
 
 //player selection
 
-$("#playerSelect").click(function()) {
-	$("a").hide();
-}
+
