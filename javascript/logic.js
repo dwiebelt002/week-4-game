@@ -30,6 +30,11 @@ var tywinLan = new opponent(350, 15, 20)
 var balGrey = new opponent(300, 10, 25)
 
 
+$(document).ready(function() {
+
 //player selection
+$(".attackButton").on("click", function() {
+	var userPlayer = prompt("Whom will you play as to conquer the Seven Kimngdoms of Westeros:  Eddard, Daenarys, Joffery, Tywin, Stannis, or Balon?")
+	}
 
-
+}(".normalButton").on("click", function(){

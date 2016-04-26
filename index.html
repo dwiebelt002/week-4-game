@@ -6,6 +6,8 @@
  
  <!--Bootstrap File   -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/reset.css">
+<link rel="stylesheet" type="text/css" href="assets/style.css">
 
 <!-- JQuery -->
 	<script src="https://code.jquery.com/jquery.js"></script>
@@ -34,8 +36,6 @@
     <h3 class="panel-title">Click to learn about the Royal Famalies of Westeros to aid in your decision on who to help seize the Iron Throne.</h3>
   </div>
  
- <div id = "playerSelect">
- </div>
 
 <div class="row">
   <div class="col-xs-6 col-md-3">
@@ -83,11 +83,24 @@
 </div>
 </div>
 
+
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="images/ironthrone.jpg" height="200px" width="200px" alt="ironthrone">
+    </a>
+  </div>
+  <div class="media-body">
+    <h2 class="media-heading">How To Play</h2>
+    <p>The Seven Kingdoms are at war! The royal families of Westeros now battle each other for the Iron Throne and control over the realm. Start by pressing the Select Character button to choose whom you want to play as. Next, choose which character you want to fight by clicking on the image of that character. Then keep pressing the Attack button to deal damage to your opponent until that enemy is defeated or until you are slain in battle. The game ends in victory when all of your enemies are defeated and you are the last one standing and the sole claimer of the Iron Throne. Do you have what it takes? Just remember, Winter is Coming...</p>
+  </div>
+</div>
+
 <!--These are the action buttons for the user to play the game -->
 <div class="btn-group" role="group" aria-label="...">
   <button type="button" class="btn btn-default">Attack</button>
   <button type="button" class="btn btn-default">Select Character</button>
-  <button type="button" class="btn btn-default">Select Opponent</button>
+  <button type="button" class="btn btn-default">Reset</button>
 </div>
 
 <!-- This position will hold your character that you are playing as -->
@@ -131,79 +144,41 @@
     Choose Who To Challenge in Battle
   </div>
 
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/nedstark.jpg" alt="Eddard">Ned Stark
-    </a>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default"><img src="images/nedstark.jpg" height="300px" width="200px"><h4>Ned Stark</h4></button>
   </div>
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/dany.png" alt="Khaleesi">Daenerys Targaryen
-    </a>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default"><img src="images/dany.png" height="300px" width="200px"><h4>Daenarys Targaryen</h4></button>
   </div>
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/joffery.jpg" alt="Joffery">Joffery Baratheon
-    </a>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default"><img src="images/joffery.jpg" height="300px" width="200px"><h4>Joffery Baratheon</h4></button>
   </div>
 </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/tywin.jpg" alt="Tywin">Tywin Lannister
-    </a>
-  </div>
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/stannis.png" alt="Stannis">Stannis Baratheon
-    </a>
-  </div>
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="images/balon.jpg" alt="Balon">Balon Greyjoy
-    </a>
-  </div>
-</div>
-
-</div>
-
-</div>
-</div>
-</div>
-
-
 
 
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Left</button>
+    <button type="button" class="btn btn-default"><img src="images/tywin.jpg" height="300px" width="220px"><h4>Tywin Lannister</h4></button>
   </div>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Middle</button>
+    <button type="button" class="btn btn-default"><img src="images/stannis.png" height="300px" width="220px"><h4>Stannis Baratheon</h4></button>
   </div>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default"><img src="images/nedstark.jpg" height="300px" width="180px" "><h4>Ned Stark</h4></button>
+    <button type="button" class="btn btn-default"><img src="images/balon.jpg" height="300px" width="220px"><h4>Balon Greyjoy</h4></button>
   </div>
 </div>
-
-
-
-
-
-
-
 
 
 <script>
 		// Javascript function that wraps everything
 		$(document).ready(function(){
+
+var player = function () {
+	prompt ("Whom will you play as to conquer the Seven Kimngdoms of Westeros:  Eddard, Daenarys, Joffery, Tywin, Stannis, or Balon?")
+}
+
+player();
 
 			// Gets Link for Theme Song
 	        var audioElement = document.createElement('audio');
