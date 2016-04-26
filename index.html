@@ -97,11 +97,12 @@
 </div>
 
 <!--These are the action buttons for the user to play the game -->
-<div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Attack</button>
-  <button type="button" class="btn btn-default">Select Character</button>
-  <button type="button" class="btn btn-default">Reset</button>
-</div>
+
+<button>Attack</button>
+
+<button id = "userSelect">Character Select</button>
+
+<button>Reset</button>
 
 <!-- This position will hold your character that you are playing as -->
 
@@ -170,17 +171,27 @@
 </div>
 
 
-<script>
+<script type = "text/javascript">
 		// Javascript function that wraps everything
 		$(document).ready(function(){
 
-var player = function () {
-	prompt ("Whom will you play as to conquer the Seven Kimngdoms of Westeros:  Eddard, Daenarys, Joffery, Tywin, Stannis, or Balon?")
+var userOptions = ["Eddard", "Daenarys", "Joffery", "Tywin", "Stannis", "Balon"]
+
+
+
+//player selection - links to "Character Select" button 
+$("#userSelect").on("click", function() {
+	var userSelect = prompt("Which character would you like to play as to conquer the Seven Kingdoms of Westeros? Please Type: Eddard, Daenarys, Joffery, Tywin, Stannis, or Balon to make your selection.");
+}); switch(userSelect) {
+	case "Eddard":
+	text = "Eddard Stark";
+	break;
 }
 
-player();
-
-			// Gets Link for Theme Song
+//userSelect will then become userCharacter and print out as Your Character on page with that character's individual health status.
+	
+	
+	// Gets Link for Theme Song
 	        var audioElement = document.createElement('audio');
 	        audioElement.setAttribute('src', 'assets/gameofthrones.m4a');
 

@@ -1,5 +1,4 @@
-var userPlayer //represents user's character choice
-var computerPlayer //respresents computer character
+
 
 var playerAttack
 var computerAttack
@@ -33,6 +32,25 @@ var balGrey = new opponent(300, 10, 25)
 $(document).ready(function() {
 
 //player selection
+
+//links to character select button 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(".attackButton").on("click", function() {
 	var userPlayer = prompt("Whom will you play as to conquer the Seven Kimngdoms of Westeros:  Eddard, Daenarys, Joffery, Tywin, Stannis, or Balon?")
 	}
