@@ -92,31 +92,34 @@
   </div>
   <div class="media-body">
     <h2 class="media-heading">How To Play</h2>
-    <p>The Seven Kingdoms are at war! The royal families of Westeros now battle each other for the Iron Throne and control over the realm. Start by pressing the Select Character button to choose whom you want to play as. Next, choose which character you want to fight by clicking on the image of that character. Then keep pressing the Attack button to deal damage to your opponent until that enemy is defeated or until you are slain in battle. The game ends in victory when all of your enemies are defeated and you are the last one standing and the sole claimer of the Iron Throne. Do you have what it takes? Just remember, Winter is Coming...</p>
+    <p>The Seven Kingdoms are at war! The royal families of Westeros now battle each other for the Iron Throne and control over the realm. Start by pressing the Select Character button to choose whom you want to play as. Next, choose which character you want to fight by clicking on the enemy select button and choosing the character to combat. Then keep pressing the Attack button to deal damage to your opponent until that enemy is defeated or until you are slain in battle. The game ends in victory when all of your enemies are defeated and you are the last one standing and the sole claimer of the Iron Throne. Do you have what it takes? Just remember, Winter is Coming...</p>
   </div>
 </div>
 
 <!--These are the action buttons for the user to play the game -->
 
-<button>Attack</button>
+<button id = "actionAttack" >Attack</button>
 
 <button id = "userSelect">Character Select</button>
 
-<button>Reset</button>
+<button id = "computerSelect">Enemy Select</button>
 
 <!-- This position will hold your character that you are playing as -->
 
-<div id = "yourCharacter"
+
 	<div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Your Character</h3>
   </div>
   <div class="panel-body">
 
+  <div id = "yourCharacter">
+  </div>
+
 <!--This span is where the user's health marker will be. -->
   <strong>Your Health</strong> <span id= "userHealth">0</span>
   </div>
-</div>
+
 
 
 
@@ -177,16 +180,40 @@
 
 var userOptions = ["Eddard", "Daenarys", "Joffery", "Tywin", "Stannis", "Balon"]
 
-
-
 //player selection - links to "Character Select" button 
 $("#userSelect").on("click", function() {
 	var userSelect = prompt("Which character would you like to play as to conquer the Seven Kingdoms of Westeros? Please Type: Eddard, Daenarys, Joffery, Tywin, Stannis, or Balon to make your selection.");
-}); switch(userSelect) {
+	switch(userSelect) {
 	case "Eddard":
+	alert("You have chosen Eddard of House Stark, Lord of Winterfell and Warden of the North. You wield the Valaryen Steel Blade 'Ice'. You value honor above all other things. Your words are 'Winter is Coming'")
 	text = "Eddard Stark";
 	break;
+	case "Daenarys":
+	alert("You have chosen Daenarys of House Targaryen, the Mother of Dragons, Khaleesi of the Great Grass Sea, and the last child of King Aerys Targaryen. You have three dragons as your children. You spend your days liberating slaves and gathering an army to seize the seven kingdoms that are rightfully yours. Your words are 'Fire and Blood'.")
+	text = "Daenarys Targaryen";
+	break;
+	case "Joffery":
+	text = "Joffery Baratheon";
+	alert("You have chosen Joffery of House Baratheon. You currently hold the crown and the Iron Throne, but your claim to rule is being tested by every kingdom in Westeros after foul rumors have spread of your birthright. You are cruel, ruthless, and you do whatever you like because you are a king. Even your mother Cersei cannot control you. Your words are 'Ours is the Fury'.")
+	break;
+	case "Tywin":
+	alert("You have chosen Tywin of House Lannister. You are the Lord of Casterly Rock and are the richest man in Westeros. You are tactical, cunning, and cold. You put your family legacy above all things, even to your youngest son Tyrion, the imp, even though he proves to be your greatest failure and disappointment. Your words are 'Hear Me Roar'")
+	text = "Tywin Lannister";
+	break;
+	case "Stannis":
+	alert("You have chosen Stannis of House Baratheon. You are the true ruler of Westeros and a usurper currently uses your name to claim his right to the throne. But that's ok. You've got a Red Woman from Asshai on your side who uses strange blood magic and sees visions in the fire that prove you are the true king. You are known for the words 'The Night is Dark and Full of Terrors' even though they are not your offical words.")
+	text = "Stannis Baratheon";
+	break;
+	case "Balon":
+	alert("You have chosen Balon of House Greyjoy. You are the Lord of the Pyke and you pay the iron price for everything you own. You believe in a hard existance and you are tough due to the harshness of the seas around you. You have rebelled against the throne many times and have failed everytime as well. But that doesn't stop you from trying again. Your words are 'We do Not Sow'.")
+	text = "Balon Greyjoy";
+	break;
+	default:
+	text = "Hmmm, never heard of that character before. Try again.";
 }
+document.getElementById("yourCharacter").innerHTML = text;
+});
+
 
 //userSelect will then become userCharacter and print out as Your Character on page with that character's individual health status.
 	

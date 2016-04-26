@@ -1,25 +1,15 @@
 
 
-var playerAttack
-var computerAttack
+var player
+var oppenent
 
 
 // Health Counters for both user and opponent
-var userHealth = 0
-var enemyHealth = 0
-
+var userHealth = 500;
+var enemyHealth = 200;
 //pre-set character attributes
-var player = function (health, strength, counter){
-this.health = health;
-this.strength = strength;
-this.counter = counter;
-};
-
-var opponent = function (health, strength){
-this.health = health;
-this.strength = strength;
-this.defense = defense;
-};
+var playerStrength = 30;
+var opponentStrength = 20;
 
 var nedStark = new opponent(400, 20, 12)
 var danyTarg = new oppenent(400, 25, 8)
@@ -28,8 +18,15 @@ var stanBar = new opponent(350, 20, 10)
 var tywinLan = new opponent(350, 15, 20)
 var balGrey = new opponent(300, 10, 25)
 
+var game_over = false;
+
+var start_game = true;
+
+
 
 $(document).ready(function() {
+
+
 
 //player selection
 
