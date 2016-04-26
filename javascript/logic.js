@@ -31,3 +31,7 @@ var balGrey = new opponent(300, 10, 25)
 
 
 //player selection
+
+$("#playerSelect").click(function()) {
+	$("a").hide();
+}
