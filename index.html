@@ -125,17 +125,18 @@
 
 <!-- This position displays the enemy that the user has selected to go into battle with. Enemy will remain in this position until defeated. -->
 
-<div id = "enemyCharacter"
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Enemy in Battle</h3>
   </div>
   <div class="panel-body">
 
+ <div id = "enemyCharacter">
+ </div>
+
 <strong>Ememy Health</strong> <span id= "enemyHealth">0</span>
 
   </div>
-</div>
 
   
 <!-- This position will display the remaining Contenders for the Iron Throne that you still have to battle in order to win the game -->
@@ -211,8 +212,35 @@ $("#userSelect").on("click", function() {
 }
 document.getElementById("yourCharacter").innerHTML = text;
 });
+
+$("#computerSelect").on("click", function() {
+	var computerSelect = prompt("Select an Opponent to Battle. Please type: Eddard, Daenarys, Joffery, Tywin, Stannis, or Balon to make your selection. DO NOT select the character you are already playing as.");
+	switch(computerSelect) {
+		case "Eddard":
+		text = "Eddard Stark"
+		break;
+		case "Daenarys":
+		text = "Daenarys Targaryen"
+		break;
+		case "Joffery":
+		text = "Joffery Baratheon"
+		break;
+		case "Tywin":
+		text = "Tywin Lannister"
+		break;
+		case "Stannis":
+		text = "Stannis Baratheon"
+		break;
+		case "Balon":
+		text = "Balon Greyjoy"
+		break;
+		default:
+	text = "Hmmm, never heard of that character before. Try again.";
+
+	}
+document.getElementById("enemyCharacter").innerHTML = text;
 	
-	
+});
 	// Gets Link for Theme Song
 	        var audioElement = document.createElement('audio');
 	        audioElement.setAttribute('src', 'assets/gameofthrones.m4a');
