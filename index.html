@@ -132,7 +132,7 @@
   </div>
   <div class="panel-body">
 
-<strong>Ememy Health</strong> <span id= "enemyCounter">0</span>
+<strong>Ememy Health</strong> <span id= "enemyHealth">0</span>
 
   </div>
 </div>
@@ -178,8 +178,6 @@
 		// Javascript function that wraps everything
 		$(document).ready(function(){
 
-var userOptions = ["Eddard", "Daenarys", "Joffery", "Tywin", "Stannis", "Balon"]
-
 //player selection - links to "Character Select" button 
 $("#userSelect").on("click", function() {
 	var userSelect = prompt("Which character would you like to play as to conquer the Seven Kingdoms of Westeros? Please Type: Eddard, Daenarys, Joffery, Tywin, Stannis, or Balon to make your selection.");
@@ -213,9 +211,6 @@ $("#userSelect").on("click", function() {
 }
 document.getElementById("yourCharacter").innerHTML = text;
 });
-
-
-//userSelect will then become userCharacter and print out as Your Character on page with that character's individual health status.
 	
 	
 	// Gets Link for Theme Song

@@ -1,55 +1,18 @@
+var characters = [
+	{Name: "Ned Stark", Health: "400", AttackPower: 6, CounterAttackPower: 12,}
+	{Name: "Daenarys Targaryen", Health: "400", AttackPower: 8, CounterAttackPower: 14,}
+	{Name: "Joffery Baratheon", Health: "325", AttackPower: 8, CounterAttackPower: 12,}
+	{Name: "Tywin Lannister", Health: "350", AttackPower: 6, CounterAttackPower: 10,}
+	{Name: "Stannis Baratheon", Health: "375", AttackPower: 7, CounterAttackPower: 14,}
+	{Name: "Balon Greyjoy", Health: "350", AttackPower: 7, CounterAttackPower: 10,}
+];
 
-
-var player
-var oppenent
-
-
-// Health Counters for both user and opponent
-var userHealth = 500;
-var enemyHealth = 200;
-//pre-set character attributes
+var userHealth = 400;
 var playerStrength = 30;
-var opponentStrength = 20;
 
-var nedStark = new opponent(400, 20, 12)
-var danyTarg = new oppenent(400, 25, 8)
-var jofBar = new opponent(300, 25, 15)
-var stanBar = new opponent(350, 20, 10)
-var tywinLan = new opponent(350, 15, 20)
-var balGrey = new opponent(300, 10, 25)
+var enemyHealth = 300;
+var opponentStrength = 20;
 
 var game_over = false;
 
-var start_game = true;
-
-
-
-$(document).ready(function() {
-
-
-
-//player selection
-
-//links to character select button 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$(".attackButton").on("click", function() {
-	var userPlayer = prompt("Whom will you play as to conquer the Seven Kimngdoms of Westeros:  Eddard, Daenarys, Joffery, Tywin, Stannis, or Balon?")
-	}
-
-}(".normalButton").on("click", function(){
+	
